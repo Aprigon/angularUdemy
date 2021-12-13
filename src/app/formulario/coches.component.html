@@ -1,0 +1,32 @@
+<div style="float: left; margin-left: 10%;">
+    <h1>
+        Componente de coches
+    </h1>
+    <form [formGroup]="formCoches" (ngSubmit)="onSubmit()">
+        <p>
+            <label>Marca: </label>
+            <input type="text" name="marca" formControlName=marca required pattern="[a-zA-Z]+">  
+        </p>
+        
+        <p>
+            <label>Matricula: </label>
+            <input type="text" name="matricula" formControlName=matricula required pattern="^[0-9]{1,4}(?!.*(LL|CH))[BCDFGHJKLMNPRSTVWXYZ]{3}"> 
+        </p>
+    
+        <p>
+            <label>Color: </label>
+            <input type="text" name="color" formControlName=color required pattern="^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$">
+        </p>
+        
+        <input type="submit" value="Guardar">
+    </form>
+</div>
+
+<div style="float: right; margin-right: 15%;">
+    <h1>Lista de coches</h1>
+    <ul>
+        <li *ngFor="let coche of coches">
+            {{coche.marca}} - {{coche.matricula}} - {{coche.color}}
+        </li>
+    </ul>
+</div>
