@@ -1,10 +1,11 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
-import { EmpleadoComponent } from './ejercicio/empleado.component';
+import { EmpleadoComponent } from './ejercicioEmpleadosError/empleado.component';
 import { CochesComponent } from './formulario/coches.component';
 
 @NgModule({
@@ -17,7 +18,8 @@ import { CochesComponent } from './formulario/coches.component';
     ReactiveFormsModule,
     BrowserModule,
     FormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent]

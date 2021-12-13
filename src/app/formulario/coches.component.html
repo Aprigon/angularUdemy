@@ -2,7 +2,7 @@
     <h1>
         Componente de coches
     </h1>
-    <form [formGroup]="formCoches" (ngSubmit)="onSubmit()">
+    <form [formGroup]="formCoches" (ngSubmit)="onSubmit(); formCoches.reset()">
         <p>
             <label>Marca: </label>
             <input type="text" name="marca" formControlName=marca required pattern="[a-zA-Z]+">  
@@ -18,7 +18,7 @@
             <input type="text" name="color" formControlName=color required pattern="^#([a-fA-F0-9]{6}|[a-fA-F0-9]{3})$">
         </p>
         
-        <input type="submit" value="Guardar">
+        <input type="submit" value="Guardar" [disabled]="!formCoches.valid">
     </form>
 </div>
 

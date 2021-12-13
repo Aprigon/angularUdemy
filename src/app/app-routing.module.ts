@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 
-import { EmpleadoComponent } from './ejercicio/empleado.component';
-import { ErrorComponent } from './ejercicio/error.component';
+import { EmpleadoComponent } from './ejercicioEmpleadosError/empleado.component';
+import { ErrorComponent } from './ejercicioEmpleadosError/error.component';
 import { CochesComponent } from './formulario/coches.component';
 
 const routes: Routes = [
